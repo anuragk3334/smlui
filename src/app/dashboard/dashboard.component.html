@@ -1,0 +1,32 @@
+<div class="dashboard-container">
+    <h1>Claims Fraud Trends</h1>
+    
+    <!-- Upper Div: Table -->
+    <mat-card class="dashboard-table-card">
+      <mat-table [dataSource]="dashboardData" class="mat-elevation-z8">
+        <!-- Category Column -->
+        <ng-container matColumnDef="category">
+          <mat-header-cell class="bold-text" *matHeaderCellDef> Category </mat-header-cell>
+          <mat-cell *matCellDef="let element" class="bold-text"> {{ element.category }}  </mat-cell>
+        </ng-container>
+  
+        <!-- Details Column -->
+        <ng-container matColumnDef="details">
+          <mat-header-cell *matHeaderCellDef class="bold-text"> Details </mat-header-cell>
+          <mat-cell *matCellDef="let element" class="bold-text"> {{ element.details }} </mat-cell>
+        </ng-container>
+  
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </mat-card>
+  
+    <!-- Lower Div: Chart -->
+    <div class="dashboard-chart-container">
+      <canvasjs-chart
+        [options]="chartOptions"
+        [styles]="{ width: '100%', height: '360px' }"
+      ></canvasjs-chart>
+    </div>
+  </div>
+  

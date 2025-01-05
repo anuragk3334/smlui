@@ -1,0 +1,43 @@
+<div class="analytics-container">
+<mat-form-field appearance="fill">
+<mat-label>Claim ID</mat-label>
+<input matInput [(ngModel)]="claimId" placeholder="Enter claim ID"  />
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="searchImages()">Search</button>
+
+<mat-spinner *ngIf="isLoading" diameter="50"></mat-spinner>
+
+<mat-table *ngIf="images.length > 0" [dataSource]="images" class="mat-elevation-z8">
+    <ng-container matColumnDef="key">
+      <mat-header-cell *matHeaderCellDef> Image Key </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <a href="javascript:void(0)" (click)="openHtmlModal(element.url)">{{ element.key }}</a>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="['key']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['key'];"></mat-row>
+  </mat-table>
+
+  <div *ngIf="!isLoading && images.length === 0" class="no-records-message">
+    No images found for the given claim ID.
+  </div>
+
+</div>
+
+<ng-template #dialogTemplate>
+  <div class="dialog-container">
+    <div class="dialog-content">
+      <iframe [src]="sanitizedUrl" class="iframe-content"></iframe>
+    </div>
+    <div class="dialog-actions">
+      <button mat-button mat-dialog-close>Close</button>
+    </div>
+  </div>
+</ng-template>
+
+
+
+
+

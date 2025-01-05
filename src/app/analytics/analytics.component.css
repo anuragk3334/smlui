@@ -1,0 +1,59 @@
+.analytics-container {
+    padding: 20px;
+  }
+  
+  mat-form-field {
+    width: 300px;
+    margin-right: 10px;
+  }
+  
+  mat-spinner {
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .no-records-message {
+    font-size: 16px;
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .full-width-dialog .mat-dialog-container {
+    padding: 0;
+    height: 60vh; /* Adjust to the desired height */
+    width: 100vw; /* Full width */
+    max-width: 100vw; /* Override Angular Material's default max-width */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .dialog-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .dialog-content {
+    flex-grow: 1;
+    overflow: auto; /* Ensure scrolling if content exceeds available space */
+  }
+  
+  
+  .iframe-content {
+    width: 100%;
+    height: 100%; /* Take up all available space */
+    border: none;
+  }
+  
+  .dialog-actions {
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+    padding: 16px; /* Adjust padding for a consistent look */
+    background-color: #f4f4f4; /* Optional: Background color for actions */
+    border-top: 1px solid #ccc; /* Optional: Border for separation */
+  }
+  
+  

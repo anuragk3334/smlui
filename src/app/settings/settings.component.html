@@ -1,0 +1,41 @@
+<div class="settings-container">
+    
+  
+    <mat-card class="settings-form">
+      <form #settingsForm="ngForm">
+        <!-- Fraud Detection Threshold -->
+        <mat-form-field appearance="outline" class="settings-field">
+          <mat-label>Fraud Detection Threshold</mat-label>
+          <input matInput type="text" name="threshold" [(ngModel)]="settings.threshold" required />
+        </mat-form-field>
+  
+        <!-- API Endpoint -->
+        <mat-form-field appearance="outline" class="settings-field">
+          <mat-label>API Endpoint</mat-label>
+          <input matInput type="text" name="apiEndpoint" [(ngModel)]="settings.apiEndpoint" required />
+        </mat-form-field>
+  
+        <!-- Retry Attempts -->
+        <mat-form-field appearance="outline" class="settings-field">
+          <mat-label>Retry Attempts</mat-label>
+          <input matInput type="number" name="retryAttempts" [(ngModel)]="settings.retryAttempts" required />
+        </mat-form-field>
+  
+        <!-- Save Changes Button -->
+        <button mat-raised-button color="primary" (click)="saveSettings()" [disabled]="settingsForm.invalid || isSaving">
+          Save Changes
+        </button>
+      </form>
+    </mat-card>
+  
+    <!-- Spinner -->
+    <div class="spinner-container" *ngIf="isSaving">
+      <mat-spinner></mat-spinner>
+    </div>
+  
+    <!-- Success Message -->
+    <div class="success-message" *ngIf="successMessage">
+      {{ successMessage }}
+    </div>
+  </div>
+  
