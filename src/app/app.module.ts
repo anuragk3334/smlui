@@ -30,6 +30,7 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { SettingsComponent } from './settings/settings.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { SettingsComponent } from './settings/settings.component';
      TrainModelComponent,
      AnalyticsComponent,
      FraudTrendsChartComponent,
-     SettingsComponent // Declare your component here
+     SettingsComponent
+  
   ],
   imports: [
     BrowserModule,

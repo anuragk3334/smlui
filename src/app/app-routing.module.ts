@@ -5,8 +5,12 @@ import { TrainModelComponent } from './train-model/train-model.component';
 import { TestClaimsComponent } from './test-claims/test-claims.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { SettingsComponent } from './settings/settings.component';
+import { AuthGuard } from './auth.guard';
 
-const routes: Routes = [{ path: '', component: DashboardComponent },
+
+const routes: Routes = [
+ 
+  { path: '', component: DashboardComponent ,canActivate: [AuthGuard]},
   { path: 'train-model', component: TrainModelComponent },
   { path: 'test-claims', component: TestClaimsComponent },
   {path: 'analytics', component: AnalyticsComponent},

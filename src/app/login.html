@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SaffAI</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('file:///C:/background.webp.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+           
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.8); /* White background with opacity */
+            color: #333;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+        .login-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .login-header img {
+            width: 40px; /* Adjust size as needed */
+            height: 40px;
+            margin-right: 10px;
+        }
+        .login-header h1 {
+            color: #007bff;
+            font-size: 36px;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .error {
+            color: #ff0000;
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .login-btn:hover {
+            background: #0056b3;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .login-container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <img src="file:///C:/icon.webp" alt="SaffAI Icon">
+            <h1>SaffAI Login</h1>
+        </div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <div class="error" id="errorMsg"></div>
+    </div>
+    <script>
+        const loginForm = document.getElementById("loginForm");
+        const errorMsg = document.getElementById("errorMsg");
+
+        loginForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            // Check credentials
+            if (username === "admin" && password === "saffai2024") {
+                window.location.href = "index.html"; // Redirect to index.html
+            } else if (username !== "admin") {
+                errorMsg.textContent = "Oops! You seem lost. Are you sure you're the admin?";
+            } else {
+                errorMsg.textContent = "Wrong password! Are you trying to hack into SaffAI?";
+            }
+        });
+    </script>
+</body>
+</html>
