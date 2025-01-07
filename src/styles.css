@@ -1,7 +1,8 @@
 /* Main container for the entire layout */
 .main-container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh; /* Minimum height of viewport */
+  height: auto; /* Allow it to expand dynamically */
  
 }
 
