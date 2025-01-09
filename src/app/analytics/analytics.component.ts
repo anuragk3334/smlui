@@ -33,7 +33,7 @@ export class AnalyticsComponent implements OnInit {
 
     this.isLoading=true;
     this.images=[];
-    const apiUrl = `http://localhost:5003/search-images?claim_id=${this.claimId}`; // Backend API URL
+    const apiUrl = `https://saff-ml-fmcvgeb8btafd6gf.westeurope-01.azurewebsites.net/search-images?claim_id=${this.claimId}`; // Backend API URL
 
     this.http.get<{ key: string; url: string }[]>(apiUrl).subscribe(
       (response) => {

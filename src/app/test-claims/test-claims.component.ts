@@ -28,7 +28,7 @@ export class TestClaimsComponent {
       const formData = new FormData();
       formData.append('file', this.selectedFile);
 
-      this.http.post<any[]>('http://localhost:5003/predict', formData).subscribe(
+      this.http.post<any[]>('https://saff-ml-fmcvgeb8btafd6gf.westeurope-01.azurewebsites.net/predict', formData).subscribe(
         (response) => {
           console.log("response received");
           this.claimsData = response;

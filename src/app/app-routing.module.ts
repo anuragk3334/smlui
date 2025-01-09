@@ -11,10 +11,10 @@ import { AuthGuard } from './auth.guard';
 const routes: Routes = [
  
   { path: '', component: DashboardComponent ,canActivate: [AuthGuard]},
-  { path: 'train-model', component: TrainModelComponent },
-  { path: 'test-claims', component: TestClaimsComponent },
-  {path: 'analytics', component: AnalyticsComponent},
-  {path: 'settings', component: SettingsComponent}
+  { path: 'train-model', component: TrainModelComponent,canActivate: [AuthGuard] },
+  { path: 'test-claims', component: TestClaimsComponent ,canActivate: [AuthGuard]},
+  {path: 'analytics', component: AnalyticsComponent,canActivate: [AuthGuard]},
+  {path: 'settings', component: SettingsComponent,canActivate: [AuthGuard]}
   
 ];
 
