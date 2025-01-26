@@ -35,4 +35,25 @@
     font-size: 16px;
     text-align: center;
   }
+
+
+  
+
+
+  .prediction-option {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .prediction-label {
+    font-weight: bold;
+    margin-bottom: 10px; /* Adds space between label and radio buttons */
+  }
+  
+  .radio-group-horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Adds space between radio buttons */
+    align-items: center; /* Aligns radio buttons vertically */
+  }
   

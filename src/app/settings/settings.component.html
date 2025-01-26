@@ -20,7 +20,26 @@
           <mat-label>Retry Attempts</mat-label>
           <input matInput type="number" name="retryAttempts" [(ngModel)]="settings.retryAttempts" required />
         </mat-form-field>
+    
+        <!-- Prediction Option -->
+<!-- Prediction Option -->
+<div class="prediction-option settings-field">
+  <label class="prediction-label">Prediction Option</label>
+  <mat-radio-group
+    aria-label="Select Prediction Type"
+    name="selectedPrediction"
+    [(ngModel)]="settings.selectedPrediction"
+    class="radio-group-horizontal"
+  >
+    <mat-radio-button value="AI Enabled">AI Enabled</mat-radio-button>
+    <mat-radio-button value="Rule Based">Rule Based</mat-radio-button>
+    <mat-radio-button value="Hybrid">Hybrid</mat-radio-button>
+  </mat-radio-group>
+</div>
+
+
   
+       
         <!-- Save Changes Button -->
         <button mat-raised-button color="primary" (click)="saveSettings()" [disabled]="settingsForm.invalid || isSaving">
           Save Changes

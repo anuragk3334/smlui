@@ -29,6 +29,8 @@ import { FraudTrendsChartComponent } from './fraud-trends-chart/fraud-trends-cha
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { SettingsComponent } from './settings/settings.component';
 
+import { MatRadioModule } from '@angular/material/radio';
+
 
 
 @NgModule({
@@ -50,7 +52,7 @@ import { SettingsComponent } from './settings/settings.component';
     CanvasJSAngularChartsModule,
     FormsModule,
     AppRoutingModule,
-   
+    
     BrowserAnimationsModule,
     HttpClientModule, // Add HttpClientModule here
     MatToolbarModule,
@@ -64,7 +66,7 @@ import { SettingsComponent } from './settings/settings.component';
     MatListModule,
     MatDialogModule,
     MatCardModule,
- 
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

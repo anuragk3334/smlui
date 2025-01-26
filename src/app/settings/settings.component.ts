@@ -10,7 +10,10 @@ export class SettingsComponent {
     threshold: '',
     apiEndpoint: '',
     retryAttempts: '',
+    selectedPrediction:'AI Enabled'
   };
+
+  
 
   isSaving: boolean = false; // Flag for showing spinner
   successMessage: string = ''; // Success message
