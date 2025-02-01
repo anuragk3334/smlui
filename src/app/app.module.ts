@@ -30,6 +30,7 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { SettingsComponent } from './settings/settings.component';
 
 import { MatRadioModule } from '@angular/material/radio';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 
 
@@ -44,7 +45,8 @@ import { MatRadioModule } from '@angular/material/radio';
      TrainModelComponent,
      AnalyticsComponent,
      FraudTrendsChartComponent,
-     SettingsComponent
+     SettingsComponent,
+     AboutMeComponent
   
   ],
   imports: [

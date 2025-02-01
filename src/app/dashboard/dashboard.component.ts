@@ -83,7 +83,7 @@ export class DashboardComponent implements AfterViewInit {
     new Chart(document.getElementById('claimAmountsChart') as HTMLCanvasElement, {
       type: 'bar',
       data: {
-        labels: ['5500892', '5500893', '5500894', '5500895', '5500896'],
+        labels: ['800894','783085','550892', '390893', '290896'],
         datasets: [{
           label: 'Claim Amount ($)',
           data: [10000, 9500, 8500, 7500, 7000],

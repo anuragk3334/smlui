@@ -6,6 +6,7 @@ import { TestClaimsComponent } from './test-claims/test-claims.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AuthGuard } from './auth.guard';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,9 @@ const routes: Routes = [
   { path: 'train-model', component: TrainModelComponent,canActivate: [AuthGuard] },
   { path: 'test-claims', component: TestClaimsComponent ,canActivate: [AuthGuard]},
   {path: 'analytics', component: AnalyticsComponent,canActivate: [AuthGuard]},
-  {path: 'settings', component: SettingsComponent,canActivate: [AuthGuard]}
+  {path: 'settings', component: SettingsComponent,canActivate: [AuthGuard]},
+  {path: 'about-us', component: AboutMeComponent,canActivate: [AuthGuard]}
+ 
   
 ];
 

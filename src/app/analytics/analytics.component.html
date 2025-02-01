@@ -1,4 +1,6 @@
-<div class="analytics-container">
+<!-- <div class="analytics-container"> -->
+<div class="settings-container">
+  <mat-card class="settings-form">
 <mat-form-field appearance="fill">
 <mat-label>Claim ID</mat-label>
 <input matInput [(ngModel)]="claimId" placeholder="Enter claim ID"  />
@@ -10,7 +12,7 @@
 
 <mat-table *ngIf="images.length > 0" [dataSource]="images" class="mat-elevation-z8">
     <ng-container matColumnDef="key">
-      <mat-header-cell *matHeaderCellDef> Image Key </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Predication Plots </mat-header-cell>
       <mat-cell *matCellDef="let element">
         <a href="javascript:void(0)" (click)="openHtmlModal(element.url)">{{ element.key }}</a>
       </mat-cell>
@@ -23,7 +25,7 @@
   <div *ngIf="!isLoading && images.length === 0" class="no-records-message">
     No images found for the given claim ID.
   </div>
-
+  </mat-card>
 </div>
 
 <ng-template #dialogTemplate>
