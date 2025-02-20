@@ -1,0 +1,14 @@
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .upload-button {
+    margin-left: auto;
+  }
+
+  .center-align {
+    text-align: center;
+    width: 100%;
+  }
