@@ -27,7 +27,7 @@ export class SettingsComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("Settings component initialized --ngOninit");
-    this.httpClient.get("https://saff-ml-fmcvgeb8btafd6gf.westeurope-01.azurewebsites.net/settings").subscribe((response:any) => {
+    this.httpClient.get("http://ec2-13-54-37-41.ap-southeast-2.compute.amazonaws.com/settings").subscribe((response:any) => {
       this.settings.threshold = response['threshold'];
       this.settings.apiEndpoint = response['apiEndpoint'];
       this.settings.retryAttempts = response['retryAttempts'];

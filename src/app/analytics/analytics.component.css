@@ -56,6 +56,17 @@
     border-top: 1px solid #ccc; /* Optional: Border for separation */
   }
 
+  .center-align {
+    text-align: center;
+    width: 100%;
+  }
+
+  .bold-header {
+    font-weight: bold;
+    font-size: 1.2em;
+    
+  }
+
   /* .settings-container {
     margin: 20px;
     display: flex;

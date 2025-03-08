@@ -11,7 +11,7 @@ export class TestClaimsComponent {
   selectedImageFiles: File[] = [];
   loading: boolean = false;
   claimsData: any[] = [];
-  displayedColumns: string[] = ['Claim_ID', 'Fraud_Prediction', 'Fraud_Probability','OCR_Prediction','AI_CREATED_IMAGE'];
+  displayedColumns: string[] = ['Claim_ID', 'Fraud_Detection','Fraud_Detection_Reason', 'Fraud_Prediction', 'OCR_Prediction'];
  
 
   constructor(private http: HttpClient) {}
@@ -64,8 +64,8 @@ export class TestClaimsComponent {
     this.selectedImageFiles.forEach((file, index) => {
       formData.append(`imageFile${index + 1}`, file);
     });
-
-    this.http.post<any[]>('https://saff-ml-fmcvgeb8btafd6gf.westeurope-01.azurewebsites.net/predict', formData).subscribe(
+    //  https://saff-ml-fmcvgeb8btafd6gf.westeurope-01.azurewebsites.net
+    this.http.post<any[]>('http://ec2-13-54-37-41.ap-southeast-2.compute.amazonaws.com/predict', formData).subscribe(
       (response) => {
         console.log("response received");
         this.claimsData = response;
