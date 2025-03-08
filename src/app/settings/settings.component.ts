@@ -47,7 +47,7 @@ export class SettingsComponent implements OnInit {
   saveSettings(): void {
     // Start the spinner
     this.isSaving = true;
-    this.httpClient.put("https://saff-ml-fmcvgeb8btafd6gf.westeurope-01.azurewebsites.net/updateSettings", this.settings).subscribe((response:any) => {
+    this.httpClient.put("http://ec2-13-54-37-41.ap-southeast-2.compute.amazonaws.com/updateSettings", this.settings).subscribe((response:any) => {
     this.settings = response;
     this.isSaving = false; // Stop the spinner
       this.successMessage = 'Settings saved successfully!'; // Show success message
