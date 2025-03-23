@@ -27,7 +27,7 @@ export class SettingsComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("Settings component initialized --ngOninit");
-    this.httpClient.get("http://ec2-13-54-37-41.ap-southeast-2.compute.amazonaws.com/settings").subscribe((response:any) => {
+    this.httpClient.get("http://ec2-13-54-44-233.ap-southeast-2.compute.amazonaws.com/settings").subscribe((response:any) => {
       this.settings.threshold = response['threshold'];
       this.settings.apiEndpoint = response['apiEndpoint'];
       this.settings.retryAttempts = response['retryAttempts'];
@@ -47,7 +47,7 @@ export class SettingsComponent implements OnInit {
   saveSettings(): void {
     // Start the spinner
     this.isSaving = true;
-    this.httpClient.put("http://ec2-13-54-37-41.ap-southeast-2.compute.amazonaws.com/updateSettings", this.settings).subscribe((response:any) => {
+    this.httpClient.put("http://ec2-13-54-44-233.ap-southeast-2.compute.amazonaws.com/updateSettings", this.settings).subscribe((response:any) => {
     this.settings = response;
     this.isSaving = false; // Stop the spinner
       this.successMessage = 'Settings saved successfully!'; // Show success message

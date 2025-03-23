@@ -65,7 +65,7 @@ export class TestClaimsComponent {
       formData.append(`imageFile${index + 1}`, file);
     });
     //  https://saff-ml-fmcvgeb8btafd6gf.westeurope-01.azurewebsites.net
-    this.http.post<any[]>('http://ec2-13-54-37-41.ap-southeast-2.compute.amazonaws.com/predict', formData).subscribe(
+    this.http.post<any[]>('http://ec2-13-54-44-233.ap-southeast-2.compute.amazonaws.com/predict', formData).subscribe(
       (response) => {
         console.log("response received");
         this.claimsData = response;

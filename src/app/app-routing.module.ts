@@ -11,9 +11,9 @@ import { AboutMeComponent } from './about-me/about-me.component';
 
 const routes: Routes = [
  
-  { path: '', component: DashboardComponent ,canActivate: [AuthGuard]},
+  { path: 'dashboard', component: DashboardComponent ,canActivate: [AuthGuard]},
   { path: 'train-model', component: TrainModelComponent,canActivate: [AuthGuard] },
-  { path: 'test-claims', component: TestClaimsComponent ,canActivate: [AuthGuard]},
+  { path: '', component: TestClaimsComponent ,canActivate: [AuthGuard]},
   {path: 'analytics', component: AnalyticsComponent,canActivate: [AuthGuard]},
   {path: 'settings', component: SettingsComponent,canActivate: [AuthGuard]},
   {path: 'about-us', component: AboutMeComponent,canActivate: [AuthGuard]}

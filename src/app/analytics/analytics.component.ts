@@ -35,8 +35,8 @@ export class AnalyticsComponent implements OnInit {
     }
     this.isLoading = true;
  
-    const apiCall1 = this.http.get<any[]>(`http://ec2-13-54-37-41.ap-southeast-2.compute.amazonaws.com/search-images?claim_id=${this.claimId}`);
-    const apiCall2 = this.http.get<any[]>(`http://ec2-13-54-37-41.ap-southeast-2.compute.amazonaws.com:80/claimDetails?claim_id=${this.claimId}`);
+    const apiCall1 = this.http.get<any[]>(`http://ec2-13-54-44-233.ap-southeast-2.compute.amazonaws.com/search-images?claim_id=${this.claimId}`);
+    const apiCall2 = this.http.get<any[]>(`http://ec2-13-54-44-233.ap-southeast-2.compute.amazonaws.com:80/claimDetails?claim_id=${this.claimId}`);
   
     forkJoin([apiCall1, apiCall2]).subscribe(
       ([imagesResponse, columnsResponse]) => {
